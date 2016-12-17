@@ -19,4 +19,6 @@ RUN apt-get update && apt-get install -y \
         nodejs \
         npm 
 
+#RUN /scripts/deploy.sh
+
 CMD ["nginx"]

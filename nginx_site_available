@@ -1,10 +1,10 @@
 upstream django {
-    server 127.0.0.1:8000;
+    server {{domain}}:8000;
 }
 
 server {
     listen      80;
-    server_name {{ domain }};
+    server_name {{domain}};
     charset     utf-8;
 
     root        {{backend_directory}};
@@ -12,17 +12,17 @@ server {
 
     location /static {
         autoindex on;
-        alias {{ static_directory }};
+        alias {{static_directory}};
     }
 
     location /media {
         autoindex on;
-        alias {{ media_directory }};
+        alias {{media_directory}};
     }
 
     # exact "theconch.io/" will deliver the index.html
     location / {
-        alias "{{ web_app_directory }}/src/";
+        alias "{{web_app_directory}}/src/";
     }
 
     location /api {
@@ -36,11 +36,11 @@ server {
     }
 
     location /build.js {
-        alias {{ web_app_directory }}/src/build.js;
+        alias {{web_app_directory}}/src/build.js;
     }
 
     location = /css/style.css {
-        alias {{ web_app_directory }}/src/css/style.css;
+        alias {{web_app_directory}}/src/css/style.css;
     }
 
 }
