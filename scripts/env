@@ -1,0 +1,10 @@
+
+export DOMAIN=staging.artmart.city
+export PROJECT=artmart-city-frontend
+export BACKEND_APP_NAME=amc-api
+export WEB_APP_NAME=amc-web-app
+export APP_DIR=/web
+export BACKEND_DIR=$APP_DIR/$BACKEND_APP_NAME
+export WEB_APP_DIR=$APP_DIR/$WEB_APP_NAME
+export MEDIA_DIR=$APP_DIR/media/
+export STATIC_DIR=$APP_DIR/static/
